@@ -4,3 +4,111 @@
 body {
 	font-size: 62.5%;
 }
+
+$border-color : rgb(242, 238, 232);
+$main-font-color: rgb(5, 36, 67);
+
+.header {
+	position: relative;
+	background-image: url(../resourses/top-background-image.jpg);
+	background-size: cover;
+	background-position: center center;
+	height: 400px;
+
+	.title {
+		position: absolute;
+		left: 50%; top:50%;
+		margin-top: 100px;
+		margin-left: -180px;
+		color: white;
+		font-size: 4em;
+		text-shadow: 0 0 3px $main-font-color;
+	}
+}
+
+
+@mixin avatar {
+	padding: 3px;
+	background-color: none;
+	border-radius: 50%;
+	border-width: 1px;
+	border-style: solid;
+	width: 80px;
+	height: 80px;
+	vertical-align: middle;
+	&:hover {
+	  transform: scale(1.2);
+	}
+}
+
+@mixin names {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-shadow: 0 0 3px $main-font-color;
+	color: white;
+}
+
+.main-part {
+	background-image: url(../resourses/top-background-image.jpg);
+	background-size: 100%;
+	overflow: hidden;
+
+	.article {
+		margin: 40px;
+		margin-top: 0;
+		background-color: rgba(255, 255, 255, .7);
+		width: calc(100% - 80px);
+		overflow: hidden;
+
+		.product {
+			padding: 20px;
+			border-color: $border-color;
+			border-width: 1px 0 0 0;
+  			border-style: solid;
+
+  			.avatars {
+  				display: inline-block;
+  				padding: 20px;
+  				width: 196px;
+
+				.student-avatar {
+					@include avatar;
+					border-color: white;
+				}
+
+  				.tutor-avatar {
+					margin-left: 20px;
+
+  					@include avatar;
+					border-color: white;
+  				}
+  			}
+
+  			.introduction {
+  				display: inline-block;
+  				padding: 20px;
+				width: calc(100% - 280px);
+				font-size: 2em;
+				color: $main-font-color;
+
+				.product-name {
+					@include names;
+				}
+				.student-name {
+					@include names;
+				}
+				.tutor-name {
+					@include names;
+				}
+  			}
+
+  			.sketches {
+				padding:20px;
+  			}
+		}
+
+		.product:first-of-type {
+			border-width: 0;
+		}
+	}
+}
