@@ -6,23 +6,23 @@ body {
 }
 
 $border-color : rgb(242, 238, 232);
-$main-font-color: rgb(5, 36, 67);
+$main-blue-color: rgb(0, 67, 118);
 
 .header {
 	position: relative;
 	background-image: url(../resourses/top-background-image.jpg);
 	background-size: cover;
-	background-position: center center;
+	background-position: center;
 	height: 400px;
 
 	.title {
 		position: absolute;
 		left: 50%; top:50%;
 		margin-top: 100px;
-		margin-left: -180px;
+		margin-left: -140px;
 		color: white;
 		font-size: 4em;
-		text-shadow: 0 0 3px $main-font-color;
+		text-shadow: 0 0 3px $main-blue-color;
 	}
 }
 
@@ -33,6 +33,7 @@ $main-font-color: rgb(5, 36, 67);
 	border-radius: 50%;
 	border-width: 1px;
 	border-style: solid;
+	border-color: $main-blue-color;
 	width: 80px;
 	height: 80px;
 	vertical-align: middle;
@@ -41,30 +42,82 @@ $main-font-color: rgb(5, 36, 67);
 	}
 }
 
+@mixin common-font {
+	font-size: 2em;
+	color: $main-blue-color;
+}
+
 @mixin names {
-	font-size: 1.5em;
+	font-size: 2em;
 	font-weight: bold;
-	text-shadow: 0 0 3px $main-font-color;
+	text-shadow: 0 0 3px $main-blue-color;
 	color: white;
 }
 
 .main-part {
-	background-image: url(../resourses/top-background-image.jpg);
-	background-size: 100%;
 	overflow: hidden;
+	
+	.agenda-part {
+		padding: 20px;
+		border-width: 0 0 1px 0;
+		border-color: $border-color;
+  		border-style: solid;
+		
+		.agenda {
+			
+			& > li {
+				margin: 0 auto;
+				padding: 40px;
+				width: 600px;
+
+				&:before {
+					content: "";
+					width: 1px;
+					background-color: $main-blue-color;
+					height: 100%;
+				}
+			}
+
+			.font-icon {
+				padding: 20px;
+				border-radius: 50%;
+				border-color: $main-blue-color;
+				border-width: 1px;
+	  			border-style: solid;
+				font-size: 1.8em;
+				color: $main-blue-color;
+			}
+			.seperator {
+				padding: 0 20px;
+			}
+			.agenda-content {
+				@include common-font;
+			}
+		}
+	}
 
 	.article {
-		margin: 40px;
-		margin-top: 0;
-		background-color: rgba(255, 255, 255, .7);
-		width: calc(100% - 80px);
 		overflow: hidden;
 
-		.product {
-			padding: 20px;
-			border-color: $border-color;
-			border-width: 1px 0 0 0;
-  			border-style: solid;
+		p {
+			// @include names;
+			padding: 40px;
+			text-align: center;
+			font-size: 2.2em;
+			color: rgb(0, 137, 241);
+		}
+
+		.dividor {
+			width: 40px;
+			height: 3px;
+			background-color: $border-color;
+			margin: 10px auto 35px auto;
+		}
+
+		.products {
+			& >li {
+				padding: 20px;	
+			}
 
   			.avatars {
   				display: inline-block;
@@ -73,14 +126,11 @@ $main-font-color: rgb(5, 36, 67);
 
 				.student-avatar {
 					@include avatar;
-					border-color: white;
 				}
 
   				.tutor-avatar {
 					margin-left: 20px;
-
   					@include avatar;
-					border-color: white;
   				}
   			}
 
@@ -89,7 +139,7 @@ $main-font-color: rgb(5, 36, 67);
   				padding: 20px;
 				width: calc(100% - 280px);
 				font-size: 2em;
-				color: $main-font-color;
+				color: $main-blue-color;
 
 				.product-name {
 					@include names;
