@@ -7,6 +7,7 @@ body {
 
 $border-color : rgb(242, 238, 232);
 $main-blue-color: rgb(0, 67, 118);
+$bright-blue-color: rgb(0, 137, 241);
 
 @mixin avatar {
 	padding: 3px;
@@ -53,15 +54,19 @@ $main-blue-color: rgb(0, 67, 118);
 	}
 }
 
+.dividor {
+	width: 70px;
+	height: 3px;
+	background-color: $border-color;
+	margin: 25px auto 45px auto;
+}
+
 .main-part {
 	overflow: hidden;
 	
 	.agenda-part {
 		padding: 20px;
-		border-width: 0 0 1px 0;
-		border-color: $border-color;
-  		border-style: solid;
-		
+
 		.agenda {
 			
 			& > li {
@@ -97,27 +102,20 @@ $main-blue-color: rgb(0, 67, 118);
 
 	.article {
 		overflow: hidden;
-		padding: 0 200px;
 
 		.attention {
+			display: block;
 			padding: 40px;
 			text-align: center;
 			font-size: 2.2em;
-			color: rgb(0, 137, 241);
+			color: $bright-blue-color;
 		}
 
 		.products {
-			padding-bottom: 40px;
+			padding: 0 200px 40px 200px;
 
 			& >li {
 				padding: 20px;	
-			}
-			
-			.dividor {
-				width: 40px;
-				height: 3px;
-				background-color: $border-color;
-				margin: 0 auto 20px auto;
 			}
 
 			.brief-info {
@@ -149,20 +147,16 @@ $main-blue-color: rgb(0, 67, 118);
 				width: calc(100% - 280px);
 				font-size: 2em;
 				color: $main-blue-color;
-				& > p {
+				& > span {
 					width: 100%;
-					span { padding-left:10px; padding-right: 50px; font-weight:bold;}
 				}
 
-				.product-name {
-					
+				.name {
+					padding-left: 10px; 
+					padding-right: 35px; 
+					font-weight:bold;
+					color: $bright-blue-color;
 				}	
-				.student-name {
-					
-				}
-				.tutor-name {
-					
-				}
   			}
 
   			.sketches {
@@ -171,6 +165,9 @@ $main-blue-color: rgb(0, 67, 118);
   				& > img {
 					padding:20px;
 					height: 350px;
+					&:hover {
+					  transform: scale(1.5);
+					}
   				}
   			}
 		}
@@ -202,5 +199,21 @@ $main-blue-color: rgb(0, 67, 118);
 		color: white;
 		font-size: 2em;
 		text-shadow: 0 0 3px $main-blue-color;
+	}
+}
+
+@media screen and (max-width: 1100px) { 
+	.main-part .article .products {
+		.introduction {
+			padding-top: 25px;
+			display: block;
+			width: 100%;
+			.product-name {
+				display: block;
+			}
+		}		
+		.avatars {
+			display: block;
+		}
 	}
 }
