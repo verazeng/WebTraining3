@@ -68,15 +68,15 @@ body {
   font-size: 62.5%;
 }
 
-/* line 11, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 .header {
   position: relative;
-  background-image: url(../resourses/top-background-image.jpg);
+  background-image: url(../resources/top-background-image.jpg);
   background-size: cover;
   background-position: center;
   height: 400px;
 }
-/* line 18, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 .header .title {
   position: absolute;
   left: 50%;
@@ -88,31 +88,31 @@ body {
   text-shadow: 0 0 3px #004376;
 }
 
-/* line 57, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 .main-part {
   overflow: hidden;
 }
-/* line 60, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .main-part .agenda-part {
   padding: 20px;
   border-width: 0 0 1px 0;
   border-color: #f2eee8;
   border-style: solid;
 }
-/* line 68, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 .main-part .agenda-part .agenda > li {
   margin: 0 auto;
   padding: 40px;
   width: 600px;
 }
-/* line 73, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 .main-part .agenda-part .agenda > li:before {
   content: "";
   width: 1px;
   background-color: #004376;
   height: 100%;
 }
-/* line 81, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 .main-part .agenda-part .agenda .font-icon {
   padding: 20px;
   border-radius: 50%;
@@ -122,44 +122,55 @@ body {
   font-size: 1.8em;
   color: #004376;
 }
-/* line 90, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 .main-part .agenda-part .agenda .seperator {
   padding: 0 20px;
 }
-/* line 93, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 .main-part .agenda-part .agenda .agenda-content {
   font-size: 2em;
   color: #004376;
 }
-/* line 99, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .main-part .article {
   overflow: hidden;
+  padding: 0 200px;
 }
 /* line 102, ../sass/style.scss */
-.main-part .article p {
+.main-part .article .attention {
   padding: 40px;
   text-align: center;
   font-size: 2.2em;
   color: #0089f1;
 }
-/* line 110, ../sass/style.scss */
-.main-part .article .dividor {
-  width: 40px;
-  height: 3px;
-  background-color: #f2eee8;
-  margin: 10px auto 35px auto;
+/* line 109, ../sass/style.scss */
+.main-part .article .products {
+  padding-bottom: 40px;
 }
-/* line 118, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 .main-part .article .products > li {
   padding: 20px;
 }
-/* line 122, ../sass/style.scss */
-.main-part .article .products .avatars {
+/* line 116, ../sass/style.scss */
+.main-part .article .products .dividor {
+  width: 40px;
+  height: 3px;
+  background-color: #f2eee8;
+  margin: 0 auto 20px auto;
+}
+/* line 123, ../sass/style.scss */
+.main-part .article .products .brief-info {
   display: inline-block;
   padding: 20px;
+  width: 100%;
+}
+/* line 129, ../sass/style.scss */
+.main-part .article .products .avatars {
+  display: inline-block;
+  padding: 0 20px;
   width: 196px;
 }
-/* line 127, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .main-part .article .products .avatars .student-avatar {
   padding: 3px;
   background-color: none;
@@ -171,11 +182,11 @@ body {
   height: 80px;
   vertical-align: middle;
 }
-/* line 40, ../sass/style.scss */
+/* line 21, ../sass/style.scss */
 .main-part .article .products .avatars .student-avatar:hover {
   transform: scale(1.2);
 }
-/* line 131, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 .main-part .article .products .avatars .tutor-avatar {
   margin-left: 20px;
   padding: 3px;
@@ -188,44 +199,66 @@ body {
   height: 80px;
   vertical-align: middle;
 }
-/* line 40, ../sass/style.scss */
+/* line 21, ../sass/style.scss */
 .main-part .article .products .avatars .tutor-avatar:hover {
   transform: scale(1.2);
 }
-/* line 137, ../sass/style.scss */
+/* line 144, ../sass/style.scss */
 .main-part .article .products .introduction {
   display: inline-block;
-  padding: 20px;
+  padding: 0 20px;
+  vertical-align: middle;
+  line-height: 30px;
   width: calc(100% - 280px);
   font-size: 2em;
   color: #004376;
 }
-/* line 144, ../sass/style.scss */
-.main-part .article .products .introduction .product-name {
-  font-size: 2em;
-  font-weight: bold;
-  text-shadow: 0 0 3px #004376;
-  color: white;
+/* line 152, ../sass/style.scss */
+.main-part .article .products .introduction > p {
+  width: 100%;
 }
-/* line 147, ../sass/style.scss */
-.main-part .article .products .introduction .student-name {
-  font-size: 2em;
+/* line 154, ../sass/style.scss */
+.main-part .article .products .introduction > p span {
+  padding-left: 10px;
+  padding-right: 50px;
   font-weight: bold;
-  text-shadow: 0 0 3px #004376;
-  color: white;
 }
-/* line 150, ../sass/style.scss */
-.main-part .article .products .introduction .tutor-name {
-  font-size: 2em;
-  font-weight: bold;
-  text-shadow: 0 0 3px #004376;
-  color: white;
-}
-/* line 155, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 .main-part .article .products .sketches {
-  padding: 20px;
+  display: inline-block;
+  margin: 0 auto;
 }
-/* line 160, ../sass/style.scss */
-.main-part .article .product:first-of-type {
-  border-width: 0;
+/* line 171, ../sass/style.scss */
+.main-part .article .products .sketches > img {
+  padding: 20px;
+  height: 350px;
+}
+
+/* line 180, ../sass/style.scss */
+.footer {
+  position: relative;
+  background-image: url(../resources/top-background-image.jpg);
+  background-size: cover;
+  height: 100px;
+}
+/* line 186, ../sass/style.scss */
+.footer > span {
+  position: absolute;
+  left: 50%;
+  margin-left: -220px;
+}
+/* line 192, ../sass/style.scss */
+.footer .twicon {
+  display: inline-block;
+  padding: 20px;
+  width: 60px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+/* line 200, ../sass/style.scss */
+.footer .copyright {
+  padding-left: 10px;
+  color: white;
+  font-size: 2em;
+  text-shadow: 0 0 3px #004376;
 }
