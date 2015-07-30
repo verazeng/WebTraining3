@@ -52,6 +52,7 @@ $bright-blue-color: rgb(0, 137, 241);
 		color: white;
 		font-size: 4em;
 		text-shadow: 0 0 3px $main-blue-color;
+		text-align: center;
 	}
 }
 
@@ -69,11 +70,13 @@ $bright-blue-color: rgb(0, 137, 241);
 		padding: 20px;
 
 		.agenda {
-			
+			width: 600px;
+			margin: 0 auto;
 			& > li {
-				margin: 0 auto;
+				box-sizing: border-box;
 				padding: 40px;
-				width: 600px;
+				width: 100%;
+
 
 				&:before {
 					content: "";
@@ -113,16 +116,18 @@ $bright-blue-color: rgb(0, 137, 241);
 		}
 
 		.products {
-			padding: 0 200px 40px 200px;
+			padding-bottom: 40px;
+			width: 1005px;
+			margin: 0 auto;
 
 			& >li {
 				padding: 20px;	
 			}
 
 			.brief-info {
-				display: inline-block;
 				padding: 20px;
 				width: 100%;
+				box-sizing: border-box;
 			}
 
   			.avatars {
@@ -142,13 +147,12 @@ $bright-blue-color: rgb(0, 137, 241);
 
   			.introduction {
   				display: inline-block;
-  				padding: 0 20px;
   				vertical-align: middle;
   				line-height: 30px;
 				width: calc(100% - 280px);
 				font-size: 2em;
 				color: $main-blue-color;
-				& > span {
+				span {
 					width: 100%;
 				}
 
@@ -158,11 +162,13 @@ $bright-blue-color: rgb(0, 137, 241);
 					font-weight:bold;
 					color: $bright-blue-color;
 				}	
+
+				p {
+					box-sizing: border-box;
+				}
   			}
 
   			.sketches {
-  				display: inline-block;
-  				margin: 0 auto;
   				& > img {
 					margin:20px;
 					height: 350px;
@@ -170,12 +176,12 @@ $bright-blue-color: rgb(0, 137, 241);
 					border-style: solid;
 					border-width: 1px;
 					&:hover {
-					  transform: scale(1.5);
+					  transform: scale(1.3);
 					}
   				}
   			}
 
-  			li:nth-of-type(2) {
+  			li:nth-of-type(1) {
   				.sketches {
   					& > img {
   						border-width: 0px;
@@ -216,8 +222,9 @@ $bright-blue-color: rgb(0, 137, 241);
 
 @media screen and (max-width: 1100px) { 
 	.main-part .article .products {
+		width: 600px;
 		.introduction {
-			padding-top: 25px;
+			margin-top: 25px;
 			display: block;
 			width: 100%;
 			.product-name {
@@ -227,5 +234,15 @@ $bright-blue-color: rgb(0, 137, 241);
 		.avatars {
 			display: block;
 		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.main-part .article .products {
+		width: 100%;
+	}
+
+	.main-part .agenda-part .agenda {
+		width: 100%;
 	}
 }

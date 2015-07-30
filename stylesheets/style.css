@@ -87,9 +87,10 @@ body {
   color: white;
   font-size: 4em;
   text-shadow: 0 0 3px #004376;
+  text-align: center;
 }
 
-/* line 58, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .dividor {
   width: 70px;
   height: 3px;
@@ -97,28 +98,33 @@ body {
   margin: 25px auto 45px auto;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .main-part {
   overflow: hidden;
 }
-/* line 68, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .main-part .agenda-part {
   padding: 20px;
 }
-/* line 73, ../sass/style.scss */
-.main-part .agenda-part .agenda > li {
-  margin: 0 auto;
-  padding: 40px;
+/* line 72, ../sass/style.scss */
+.main-part .agenda-part .agenda {
   width: 600px;
+  margin: 0 auto;
 }
-/* line 78, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
+.main-part .agenda-part .agenda > li {
+  box-sizing: border-box;
+  padding: 40px;
+  width: 100%;
+}
+/* line 81, ../sass/style.scss */
 .main-part .agenda-part .agenda > li:before {
   content: "";
   width: 1px;
   background-color: #004376;
   height: 100%;
 }
-/* line 86, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 .main-part .agenda-part .agenda .font-icon {
   padding: 20px;
   border-radius: 50%;
@@ -128,20 +134,20 @@ body {
   font-size: 1.8em;
   color: #004376;
 }
-/* line 95, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .main-part .agenda-part .agenda .seperator {
   padding: 0 20px;
 }
-/* line 98, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 .main-part .agenda-part .agenda .agenda-content {
   font-size: 2em;
   color: #004376;
 }
-/* line 104, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 .main-part .article {
   overflow: hidden;
 }
-/* line 107, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .main-part .article .attention {
   display: block;
   padding: 40px;
@@ -149,27 +155,29 @@ body {
   font-size: 2.2em;
   color: #0089f1;
 }
-/* line 115, ../sass/style.scss */
-.main-part .article .products {
-  padding: 0 200px 40px 200px;
-}
 /* line 118, ../sass/style.scss */
+.main-part .article .products {
+  padding-bottom: 40px;
+  width: 1005px;
+  margin: 0 auto;
+}
+/* line 123, ../sass/style.scss */
 .main-part .article .products > li {
   padding: 20px;
 }
-/* line 122, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 .main-part .article .products .brief-info {
-  display: inline-block;
   padding: 20px;
   width: 100%;
+  box-sizing: border-box;
 }
-/* line 128, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 .main-part .article .products .avatars {
   display: inline-block;
   padding: 0 20px;
   width: 196px;
 }
-/* line 133, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 .main-part .article .products .avatars .student-avatar {
   padding: 3px;
   background-color: none;
@@ -185,7 +193,7 @@ body {
 .main-part .article .products .avatars .student-avatar:hover {
   transform: scale(1.2);
 }
-/* line 137, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 .main-part .article .products .avatars .tutor-avatar {
   margin-left: 20px;
   padding: 3px;
@@ -202,33 +210,31 @@ body {
 .main-part .article .products .avatars .tutor-avatar:hover {
   transform: scale(1.2);
 }
-/* line 143, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 .main-part .article .products .introduction {
   display: inline-block;
-  padding: 0 20px;
   vertical-align: middle;
   line-height: 30px;
   width: calc(100% - 280px);
   font-size: 2em;
   color: #004376;
 }
-/* line 151, ../sass/style.scss */
-.main-part .article .products .introduction > span {
+/* line 155, ../sass/style.scss */
+.main-part .article .products .introduction span {
   width: 100%;
 }
-/* line 155, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 .main-part .article .products .introduction .name {
   padding-left: 10px;
   padding-right: 35px;
   font-weight: bold;
   color: #0089f1;
 }
-/* line 163, ../sass/style.scss */
-.main-part .article .products .sketches {
-  display: inline-block;
-  margin: 0 auto;
-}
 /* line 166, ../sass/style.scss */
+.main-part .article .products .introduction p {
+  box-sizing: border-box;
+}
+/* line 172, ../sass/style.scss */
 .main-part .article .products .sketches > img {
   margin: 20px;
   height: 350px;
@@ -236,29 +242,29 @@ body {
   border-style: solid;
   border-width: 1px;
 }
-/* line 172, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 .main-part .article .products .sketches > img:hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
-/* line 180, ../sass/style.scss */
-.main-part .article .products li:nth-of-type(2) .sketches > img {
+/* line 186, ../sass/style.scss */
+.main-part .article .products li:nth-of-type(1) .sketches > img {
   border-width: 0px;
 }
 
-/* line 189, ../sass/style.scss */
+/* line 195, ../sass/style.scss */
 .footer {
   position: relative;
   background-image: url(../resources/top-background-image.jpg);
   background-size: cover;
   height: 100px;
 }
-/* line 195, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 .footer > span {
   position: absolute;
   left: 50%;
   margin-left: -220px;
 }
-/* line 201, ../sass/style.scss */
+/* line 207, ../sass/style.scss */
 .footer .twicon {
   display: inline-block;
   padding: 20px;
@@ -266,7 +272,7 @@ body {
   border-radius: 50%;
   vertical-align: middle;
 }
-/* line 209, ../sass/style.scss */
+/* line 215, ../sass/style.scss */
 .footer .copyright {
   padding-left: 10px;
   color: white;
@@ -275,18 +281,33 @@ body {
 }
 
 @media screen and (max-width: 1100px) {
-  /* line 219, ../sass/style.scss */
+  /* line 224, ../sass/style.scss */
+  .main-part .article .products {
+    width: 600px;
+  }
+  /* line 226, ../sass/style.scss */
   .main-part .article .products .introduction {
-    padding-top: 25px;
+    margin-top: 25px;
     display: block;
     width: 100%;
   }
-  /* line 223, ../sass/style.scss */
+  /* line 230, ../sass/style.scss */
   .main-part .article .products .introduction .product-name {
     display: block;
   }
-  /* line 227, ../sass/style.scss */
+  /* line 234, ../sass/style.scss */
   .main-part .article .products .avatars {
     display: block;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 241, ../sass/style.scss */
+  .main-part .article .products {
+    width: 100%;
+  }
+
+  /* line 245, ../sass/style.scss */
+  .main-part .agenda-part .agenda {
+    width: 100%;
   }
 }
