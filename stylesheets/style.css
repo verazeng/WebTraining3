@@ -158,7 +158,7 @@ body {
 /* line 118, ../sass/style.scss */
 .main-part .article .products {
   padding-bottom: 40px;
-  width: 1005px;
+  width: 1010px;
   margin: 0 auto;
 }
 /* line 123, ../sass/style.scss */
@@ -247,7 +247,7 @@ body {
   transform: scale(1.3);
 }
 /* line 186, ../sass/style.scss */
-.main-part .article .products li:nth-of-type(1) .sketches > img {
+.main-part .article .products li:nth-of-type(2) .sketches > img {
   border-width: 0px;
 }
 
